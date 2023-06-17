@@ -249,6 +249,7 @@ header .header-right .item:hover {
 .shop-box .card-body .cash {
     font-size: 22px;
     margin-left: 90px;
+
 }
 
 
@@ -582,3 +583,5 @@ form .form-content input:valid~span::before {
     }
 
 }
+
+

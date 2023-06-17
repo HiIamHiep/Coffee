@@ -69,7 +69,7 @@ class OrderObject
 
     public function get_total_price()
     {
-        return $this->total_price;
+        return number_format($this->total_price, 0, '', ',') ;
     }
     public function set_total_price($var)
     {
@@ -87,7 +87,8 @@ class OrderObject
     
     public function get_created_at()
     {
-        return $this->created_at;
+        $date = new DateTimeImmutable($this->created_at);
+        return $date->format('d-m-Y');
     }
     public function set_created_at($var)
     {

@@ -42,7 +42,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <form class="form-sample" action="?controller=admin&action=store_customer" method="post" enctype="multipart/form-data">
-                                            <p class="card-description"> Personal info </p>
+                                            <p class="card-description">Create new customer</p>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group row">

@@ -13,7 +13,7 @@ class ProductObject
     {
         $this->id = $params['id'] ?? '';
         $this->name = $params['name'];
-        $this->price = $params['price'];
+        $this->price = $params['price'] ?? '?';
         $this->description = $params['description'];
         $this->photo = $params['photo'] ?? '';
         $this->manufacturer_id = $params['manufacturer_id'];

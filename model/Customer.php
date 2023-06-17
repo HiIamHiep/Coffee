@@ -1,7 +1,7 @@
 <?php
 
 require 'CustomerObject.php';
-require 'Connect.php';
+require_once 'Connect.php';
 
 class Customer
 {
@@ -69,6 +69,7 @@ class Customer
             $_SESSION['id'] = $id;
             $_SESSION['phone_number'] = $customer['phone_number'];
             $_SESSION['address'] = $customer['address'];
+            $_SESSION['photo'] = $customer['photo'];
             $_SESSION['name'] = $customer['first_name'] . " " . $customer['last_name'];
             if($remember){
                 $token = uniqid('user_',true);
@@ -95,7 +96,8 @@ class Customer
 
     public function index()
     {
-        $sql = "select * from {$this->table}";
+        session_start();
+        $sql = "select * from {$this->table} where id <> '{$_SESSION['id']}'";
         $result = (new Connect())->select($sql);
         $row = mysqli_num_rows($result);
 

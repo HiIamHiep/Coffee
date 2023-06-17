@@ -1,6 +1,6 @@
 <?php
 
-require 'Connect.php';
+require_once 'Connect.php';
 require 'ProductObject.php';
 
 class Product
@@ -46,6 +46,7 @@ class Product
         }
 
         $sql = "insert into {$this->table} (name, price, description, photo, manufacturer_id) values ('{$object->get_name()}','{$object->get_price()}','{$object->get_description()}','{$path_file}','{$object->get_manufacturer_id()}')";
+
         (new Connect())->execute($sql);
     }
 

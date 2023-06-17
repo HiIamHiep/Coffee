@@ -1,6 +1,6 @@
 <?php
 
-require 'Connect.php';
+require_once 'Connect.php';
 require 'ManufacturerObject.php';
 
 class Manufacturer

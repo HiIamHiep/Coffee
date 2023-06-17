@@ -43,7 +43,7 @@
                                 <thead>
                                 <tr>
                                     <th>Photo</th>
-                                    <td><img src="<?php echo $result->get_photo() ?>"></td>
+                                    <td><img src="<?php echo $result->get_photo() ?>" style="border-radius: initial; width: 100px; height: 100px;"></td>
                                 </tr>
                                 <tr>
                                     <th>First name</th>
@@ -107,6 +107,12 @@
                                                 break;
                                         }
                                         ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="?controller=admin&action=edit_customer&id=<?php echo $result->get_id() ?>" style="padding: 15px; text-decoration: none;"><i class="fa-regular fa-note-sticky"></i> Update</a>
+                                        <a href="?controller=admin&action=delete_customer&id=<?php echo $result->get_id() ?>" style="padding: 15px; text-decoration: none;"><i class="fa-regular fa-trash-can"></i> Delete</a>
                                     </td>
                                 </tr>
                                 </thead>

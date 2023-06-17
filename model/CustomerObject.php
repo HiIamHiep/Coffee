@@ -21,12 +21,12 @@ class CustomerObject
         $this->first_name = $rows['first_name'];
         $this->last_name = $rows['last_name'];
         $this->gender = $rows['gender'];
-        $this->birth_date = $rows['birth_date'];
+        $this->birth_date = $rows['birth_date'] ?? '';
         $this->email = $rows['email'];
         $this->password = $rows['password'];
         $this->photo = $rows['photo'];
         $this->phone_number = $rows['phone_number'];
-        $this->address = $rows['address'];
+        $this->address = $rows['address'] ?? '';
         $this->role = $rows['role'] ?? 0;
         $this->token = $rows['token'] ?? '';
     }
@@ -130,7 +130,7 @@ class CustomerObject
 
     public function get_fullname()
     {
-        return $this->first_name.$this->last_name;
+        return $this->first_name. " " . $this->last_name;
     }
     
     public function get_role()

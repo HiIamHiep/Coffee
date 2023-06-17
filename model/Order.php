@@ -1,6 +1,6 @@
 <?php
 
-require 'Connect.php';
+require_once 'Connect.php';
 require 'OrderObject.php';
 
 class Order
@@ -23,7 +23,8 @@ class Order
     }
 
     public function order_detail($var){
-        $sql = "select * from order_product join products on products.id = order_product.product_id where order_id = '$var'";
+        $sql = "select * from order_product join products as p on p.id = order_product.product_id where order_id = '$var'";
+
         $result = (new Connect())->select($sql);
 
         return $result;

@@ -4,12 +4,18 @@ class Controller
 {
     public function index(): void
     {
+        require './model/Product.php';
         require 'view/index.php';
     }
 
     public function signin(): void
     {
-        require 'view/signin.php';
+        session_start();
+        if(isset($_SESSION['id'])){
+            require 'view/signin.php';
+        } else {
+            header('Location:?controller=base');
+        }
     }
 
     public function signup(): void
@@ -29,12 +35,21 @@ class Controller
         require 'view/product.php';
     }
 
+    public function customer_order(): void
+    {
+        require './model/Customer.php';
+        session_start();
+        $id = $_SESSION['id'];
+        $object = (new Customer())->find($id);
+        require 'view/checkout_order.php';
+    }
+
     public function detail_product()
     {
         require './model/Product.php';
         $id = $_GET["id"];
         $object = (new Product())->find($id);
-        require 'view/product_detail.php';
+        require 'view/detail_product.php';
     }
 
     public function add_to_cart()
@@ -73,6 +88,7 @@ class Controller
     {
         require 'view/admin/index.php';
     }
+
 
     public function customer()
     {
@@ -175,6 +191,14 @@ class Controller
         require 'view/admin/products/index.php';
     }
 
+    public function detail_products()
+    {
+        require './model/Product.php';
+        $id = $_GET['id'];
+        $result = (new Product())->find($id);
+        require 'view/admin/products/view.php';
+    }
+
     public function create_product()
     {
         require './model/Product.php';
@@ -201,6 +225,7 @@ class Controller
     {
         require './model/Product.php';
         (new Product())->update($_POST);
+
         header('Location:?controller=admin&action=products');
     }
 
@@ -213,6 +238,7 @@ class Controller
     }
 
     public function order(){
+        require './model/Customer.php';
         require './model/Order.php';
         $result = (new Order())->index();
         require 'view/admin/orders/index.php';
@@ -221,9 +247,10 @@ class Controller
     public function order_detail()
     {
         require './model/Order.php';
+        require './model/Product.php';
         $id = $_GET['id'];
         $result = (new Order())->order_detail($id);
-        require 'view/admin/orders/detail.php';
+        require 'view/admin/orders/view.php';
     }
 
     public function confirm_order()

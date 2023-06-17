@@ -37,13 +37,12 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Customers</h4>
+                            <h4 class="card-title">Edit Customer</h4>
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
                                         <form class="form-sample" action="?controller=admin&action=update_customer" method="post" enctype="multipart/form-data">
                                             <input type="hidden" name="id" value="<?php echo $object->get_id() ?>">
-                                            <p class="card-description"> Personal info </p>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group row">

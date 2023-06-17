@@ -1,3 +1,10 @@
+<?php
+if (session_status() == 0) {
+    session_start();
+} elseif (session_status() == 1) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,9 +54,6 @@
                                     <th> Last name </th>
                                     <th> Email </th>
                                     <th> Role </th>
-                                    <th>  </th>
-                                    <th>  </th>
-                                    <th>  </th>
                                 </tr>
                                 </thead>
                                 <tbody>

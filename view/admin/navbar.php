@@ -1,8 +1,8 @@
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="./view/admin/assets/images/logo.svg"
+        <a class="navbar-brand brand-logo" href="?controller=admin"><img src="./view/admin/assets/images/logo.svg"
                                                                   alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img
+        <a class="navbar-brand brand-logo-mini" href="?controller=admin"><img
                 src="./view/admin/assets/images/logo-mini.svg" alt="logo"/></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -10,7 +10,7 @@
             <span class="mdi mdi-menu"></span>
         </button>
         <div class="search-field d-none d-md-block">
-            <form class="d-flex align-items-center h-100" action="#">
+            <form class="d-flex align-items-center h-100" action="?controller=admin">
                 <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
                         <i class="input-group-text border-0 mdi mdi-magnify"></i>
@@ -24,11 +24,11 @@
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown"
                    aria-expanded="false">
                     <div class="nav-profile-img">
-                        <img src="./view/admin/assets/images/faces/face1.jpg" alt="image">
+                        <img src="<?php if(!empty($_SESSION['photo'])) { echo $_SESSION['photo']; } ?>" alt="image">
                         <span class="availability-status online"></span>
                     </div>
                     <div class="nav-profile-text">
-                        <p class="mb-1 text-black">David Greymaax</p>
+                        <p class="mb-1 text-black"><?php if(!empty($_SESSION['name'])) { echo $_SESSION['name']; } ?></p>
                     </div>
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">

@@ -53,6 +53,10 @@ switch ($controller) {
         (new UserController())->info_customer();
         break;
 
+    case 'customer_order':
+        (new Controller())->customer_order();
+        break;
+
     case 'product':
         (new Controller())->product();
         break;
@@ -130,6 +134,9 @@ switch ($controller) {
                 break;
             case 'products':
                 (new Controller())->products();
+                break;
+            case 'detail_products':
+                (new Controller())->detail_products();
                 break;
             case 'create_product':
                 (new Controller())->create_product();
