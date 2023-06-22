@@ -5,7 +5,7 @@ class Connect
     private $host = 'us-cdbr-east-06.cleardb.net';
     private $user = 'b68a8766e141a8';
     private $password = 'f88fa9af';
-    private $database = 'heroku_e5d511da014290d?reconnect=true';
+    private $database = 'heroku_e5d511da014290d';
 
     private function cnt()
     {
