@@ -1,7 +1,5 @@
 <?php
 
-    require './model/Customers.php';
-    $result = (new Customer())->index();
+    require 'route.php';
 
-    var_dump($result);
     
