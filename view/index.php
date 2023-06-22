@@ -19,7 +19,7 @@
 <body>
 <?php require 'header.php' ?>
 <div class="content">
-    <h2>Blabla Coffee</h2>
+    <h2>Bobby Coffee</h2>
     <p>Would you like to start the day with a nice coffee?</p>
 </div>
 
@@ -29,7 +29,7 @@
         <h4>Blabla Coffee Drinks</h4>
     </div>
     <?php
-    $sql = "select * from products limit 5";
+    $sql = "select * from products order by id desc limit 5 ";
     $result = (new Connect())->select($sql);
     ?>
     <div class="shop-box">
@@ -87,7 +87,7 @@
                     <span></span>
                     <label>Email</label>
                 </div>
-                <button type="submit">Send</button>
+                <button type="button">Send</button>
             </form>
         </div>
     </div>

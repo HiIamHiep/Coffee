@@ -18,11 +18,20 @@
 
         <!-- Sign up form -->
         <section class="signup">
+            <?php
+            session_start();
+            if(isset($_SESSION['error'])){
+                echo "<span style='color: red'>";
+                echo $_SESSION['error'];
+                unset($_SESSION['error']);
+                echo "</span>";
+            }
+            ?>
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form">
+                        <form method="POST" class="register-form" id="register-form" action="?controller=signup&action=dosignup">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="first_name" id="name" placeholder="First Name" required/>
@@ -32,28 +41,32 @@
                                 <input type="text" name="last_name" id="name" placeholder="Last Name" required/>
                             </div>
                             <div class="form-group">
+                                <label for="email"><i class="fa-solid fa-cake-candles"></i></label>
+                                <input type="date" name="birth_date" id="email" required/>
+                            </div>
+                            <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email" required/>
                             </div>
                             <div class="form-group">
                                 <div style="display: flex; flex-direction: row;">
                                     <span>Male</span>
-                                    <input type="radio" name="email" value="0"/>
+                                    <input type="radio" name="gender" value="0"/>
                                     <span>Female</span>
-                                    <input type="radio" name="email" value="1"/>
+                                    <input type="radio" name="gender" value="1"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="password" id="pass" placeholder="Password" required/>
                             </div>
-                            <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required/>
-                            </div>
+<!--                            <div class="form-group">-->
+<!--                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>-->
+<!--                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required/>-->
+<!--                            </div>-->
                             <div class="form-group">
                                 <label for="email"><i class="fa-solid fa-phone"></i>></label>
-                                <input type="email" name="phone_number" id="email" placeholder="Phone number"/>
+                                <input type="text" name="phone_number" id="email" placeholder="Phone number"/>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" checked/>

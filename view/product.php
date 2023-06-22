@@ -63,12 +63,12 @@
         </div>
     </div>
 
-    <?php } } else {
+    <?php } } else { ?>
+        <div>
+            <span style="text-align: center">Hiện chưa có sản phẩn nào</span>
+        </div>
+    <?php } ?>
 
-    } ?>
-    <div>
-        <span style="text-align: center">Hiện chưa có sản phẩn nào</span>
-    </div>
     </div>
     </div>
 </section>

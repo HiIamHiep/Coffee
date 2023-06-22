@@ -11,7 +11,7 @@ class Controller
     public function signin(): void
     {
         session_start();
-        if(isset($_SESSION['id'])){
+        if(empty($_SESSION['id'])){
             require 'view/signin.php';
         } else {
             header('Location:?controller=base');
@@ -22,6 +22,7 @@ class Controller
     {
         require 'view/signup.php';
     }
+
 
     public function view_cart(): void
     {
@@ -39,8 +40,10 @@ class Controller
     {
         require './model/Customer.php';
         session_start();
-        $id = $_SESSION['id'];
-        $object = (new Customer())->find($id);
+        if(!empty($_SESSION['id'])){
+            $id = $_SESSION['id'];
+            $object = (new Customer())->find($id);
+        }
         require 'view/checkout_order.php';
     }
 
@@ -86,12 +89,17 @@ class Controller
 
     public function admin()
     {
+        require './model/Role.php';
+        (new Role())->check();
+        require './model/Connect.php';
         require 'view/admin/index.php';
     }
 
 
     public function customer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         $result = (new Customer())->index();
         require 'view/admin/customers/index.php';
@@ -99,6 +107,8 @@ class Controller
 
     public function detail_customer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         $id = $_GET['id'];
         $result = (new Customer())->find($id);
@@ -107,12 +117,16 @@ class Controller
 
     public function create_customer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         require 'view/admin/customers/create.php';
     }
 
     public function store_customer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         (new Customer())->create($_POST);
         header('location:?controller=admin&action=customer');
@@ -120,6 +134,8 @@ class Controller
 
     public function edit_customer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         $id = $_GET['id'];
         $object = (new Customer())->find($id);
@@ -128,6 +144,8 @@ class Controller
 
     public function update_customer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         (new Customer())->update($_POST);
         header('Location:?controller=admin&action=customer');
@@ -135,6 +153,8 @@ class Controller
 
     public function delete_customer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         $id = $_GET['id'];
         (new Customer())->delete($id);
@@ -143,6 +163,8 @@ class Controller
 
     public function manufacturer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Manufacturer.php';
         $result = (new Manufacturer())->index();
         require 'view/admin/manufacturers/index.php';
@@ -150,11 +172,15 @@ class Controller
 
     public function create_manufacturer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require 'view/admin/manufacturers/create.php';
     }
 
     public function store_manufacturer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Manufacturer.php';
         (new Manufacturer())->create($_POST);
         header('location:?controller=admin&action=manufacturer');
@@ -163,6 +189,8 @@ class Controller
 
     public function edit_manufacturer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Manufacturer.php';
         $id = $_GET['id'];
         $object = (new Manufacturer())->find($id);
@@ -171,6 +199,8 @@ class Controller
 
     public function update_manufacturer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Manufacturer.php';
         (new Manufacturer())->update($_POST);
         header('Location:?controller=admin&action=manufacturer');
@@ -178,6 +208,8 @@ class Controller
 
     public function delete_manufacturer()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Manufacturer.php';
         $id = $_GET['id'];
         (new Manufacturer())->delete($id);
@@ -186,6 +218,8 @@ class Controller
 
     public function products()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Product.php';
         $result = (new Product())->index();
         require 'view/admin/products/index.php';
@@ -193,6 +227,8 @@ class Controller
 
     public function detail_products()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Product.php';
         $id = $_GET['id'];
         $result = (new Product())->find($id);
@@ -201,12 +237,16 @@ class Controller
 
     public function create_product()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Product.php';
         require 'view/admin/products/create.php';
     }
 
     public function store_product()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Product.php';
         (new Product())->create($_POST);
         header('location:?controller=admin&action=products');
@@ -215,6 +255,8 @@ class Controller
 
     public function edit_product()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Product.php';
         $id = $_GET['id'];
         $object = (new Product())->find($id);
@@ -223,6 +265,8 @@ class Controller
 
     public function update_product()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Product.php';
         (new Product())->update($_POST);
 
@@ -231,6 +275,8 @@ class Controller
 
     public function delete_product()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Product.php';
         $id = $_GET['id'];
         (new Product())->delete($id);
@@ -238,6 +284,8 @@ class Controller
     }
 
     public function order(){
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Customer.php';
         require './model/Order.php';
         $result = (new Order())->index();
@@ -246,6 +294,8 @@ class Controller
 
     public function order_detail()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Order.php';
         require './model/Product.php';
         $id = $_GET['id'];
@@ -255,6 +305,8 @@ class Controller
 
     public function confirm_order()
     {
+        require './model/Role.php';
+        (new Role())->check();
         require './model/Order.php';
         $id = $_GET['id'];
         (new Order())->confirm_order($id);

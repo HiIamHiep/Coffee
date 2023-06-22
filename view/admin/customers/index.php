@@ -1,10 +1,3 @@
-<?php
-if (session_status() == 0) {
-    session_start();
-} elseif (session_status() == 1) {
-    session_start();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

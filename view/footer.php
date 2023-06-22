@@ -10,7 +10,7 @@
             <label>Copyright &copy; 2022</label>
         </div>
         <div class="brand">
-            <label>Blabla <span>Coffee</span></label>
+            <label>Bobby <span>Coffee</span></label>
         </div>
     </div>
 </div>

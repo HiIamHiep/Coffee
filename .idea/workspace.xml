@@ -2,152 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d78547c-2649-4633-a38c-ab6ccd109eb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/view/admin/manufacturers/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/manufacturers/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/manufacturers/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/orders/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/orders/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1686942293.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1686942304.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/css/custom_detail_product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/css/custom_show_product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/css/custom_view_cart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/form_order/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/form_order/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/form_order/img/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/product_detail/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/material-icon/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/material-icon/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/material-icon/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/material-icon/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/material-icon/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-300italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-500italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-600.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-600.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-600.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-600.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-600.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-700italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-800italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/poppins-v5-latin-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-700italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/fonts/poppins/roboto-condensed-v16-latin-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/images/signin-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/images/signup-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/common/extend.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/common/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/common/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/common/minxi.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/common/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/layouts/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/layouts/responsive.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/vendor/jquery/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/signup/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/checkout_order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/checkoutsuccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/detail_product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/customers/photos/1687453726.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/manufacturers/photos/1687028744.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168715.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168779.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168837.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168903.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169059.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169109.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169153.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169339.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169475.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333355.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333448.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333793.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333870.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687334020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/assets/css/profile_custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/assets/js/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/profile_customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Customer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/CustomerObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/CustomerObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Manufacturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Manufacturer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/OrderObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/OrderObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ProductObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProductObject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/customers/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/customers/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/customers/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/customers/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/admin/customers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/customers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/customers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/customers/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/manufacturers/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/photos/1686672405.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/photos/1686672479.2_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/photos/1686674887.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/admin/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/side_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/side_bar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/orders/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/orders/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/orders/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/orders/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/products/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/products/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/products/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/products/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/products/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/css/custom_show_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom_show_product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/css/custom_view_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom_view_cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/form_order/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/form_order/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/checkout_order.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkout_order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/checkoutsuccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkoutsuccess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/view_cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/view_cart.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,6 +96,7 @@
       <recent name="C:\laragon\www\Coffee\view\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Coffee\view\assets\js" />
       <recent name="C:\laragon\www\Coffee\view\admin" />
       <recent name="C:\laragon\www\Coffee\view" />
     </key>
@@ -215,7 +121,12 @@
       <workItem from="1686940783913" duration="3915000" />
       <workItem from="1686946679732" duration="4245000" />
       <workItem from="1686982066103" duration="9719000" />
-      <workItem from="1687025773854" duration="425000" />
+      <workItem from="1687025773854" duration="9221000" />
+      <workItem from="1687166562422" duration="5419000" />
+      <workItem from="1687327294815" duration="599000" />
+      <workItem from="1687332875358" duration="8287000" />
+      <workItem from="1687361607381" duration="7710000" />
+      <workItem from="1687451725252" duration="2583000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,5 @@
-<?php session_start() ?>
 <?php
-if (empty($_SESSION['role']) && $_SESSION['role'] != 1){
-    echo "Bạn không có quyền truy cập";
-    die();
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,11 +43,15 @@ if (empty($_SESSION['role']) && $_SESSION['role'] != 1){
                             <div class="card-body">
                                 <img src="./view/admin/assets/images/dashboard/circle.svg" class="card-img-absolute"
                                      alt="circle-image"/>
-                                <h4 class="font-weight-normal mb-3">Weekly Sales <i
+                                <h4 class="font-weight-normal mb-3">Total Product<i
                                             class="mdi mdi-chart-line mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5">$ 15,0000</h2>
-                                <h6 class="card-text">Increased by 60%</h6>
+                                <?php
+                                    $count_product = "select count(id) from products";
+                                    $products = (new Connect())->select($count_product);
+                                    $total_product = mysqli_fetch_array($products)['count(id)']
+                                ?>
+                                <h2 class="mb-5"><?php echo $total_product ?></h2>
                             </div>
                         </div>
                     </div>
@@ -60,11 +60,16 @@ if (empty($_SESSION['role']) && $_SESSION['role'] != 1){
                             <div class="card-body">
                                 <img src="./view/admin/assets/images/dashboard/circle.svg" class="card-img-absolute"
                                      alt="circle-image"/>
-                                <h4 class="font-weight-normal mb-3">Weekly Orders <i
+                                <h4 class="font-weight-normal mb-3">Customers<i
                                             class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5">45,6334</h2>
-                                <h6 class="card-text">Decreased by 10%</h6>
+                                <?php
+                                $count_customer = "select count(id) from customers where role <> '1'";
+                                $customers = (new Connect())->select($count_customer);
+                                $total_customer = mysqli_fetch_array($customers)['count(id)'];
+                                ?>
+                                <h2 class="mb-5"><?php echo $total_customer ?></h2>
+<!--                                <h6 class="card-text">Decreased by 10%</h6>-->
                             </div>
                         </div>
                     </div>
@@ -73,11 +78,16 @@ if (empty($_SESSION['role']) && $_SESSION['role'] != 1){
                             <div class="card-body">
                                 <img src="./view/admin/assets/images/dashboard/circle.svg" class="card-img-absolute"
                                      alt="circle-image"/>
-                                <h4 class="font-weight-normal mb-3">Visitors Online <i
+                                <h4 class="font-weight-normal mb-3">Total price sell products<i
                                             class="mdi mdi-diamond mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5">95,5741</h2>
-                                <h6 class="card-text">Increased by 5%</h6>
+                                <?php
+                                $sum_total = "select sum(total_price) from orders";
+                                $total_price = (new Connect())->select($sum_total);
+                                $total_price_sell_products = mysqli_fetch_array($total_price)['sum(total_price)'];
+                                ?>
+                                <h2 class="mb-5"><?php echo number_format($total_price_sell_products, 0, '', ',') ?>đ</h2>
+<!--                                <h6 class="card-text">Increased by 5%</h6>-->
                             </div>
                         </div>
                     </div>

@@ -21,11 +21,19 @@ class UserController
         (new Customer())->signout();
     }
 
-    public function info_customer()
+    public function profile(): void
     {
         require './model/Customer.php';
-        $id = $_GET['id'];
-        $result = (new Customer)->find($id);
-        require 'view/infor.php';
+        session_start();
+        $id = $_SESSION['id'];
+        $object = (new Customer())->find($id);
+        require 'view/profile_customer.php';
+    }
+
+    public function update_profile(): void
+    {
+        require './model/Customer.php';
+        (new Customer())->update($_POST);
+        header('location:?controller=profile');
     }
 }

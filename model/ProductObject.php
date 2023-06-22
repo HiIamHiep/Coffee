@@ -14,7 +14,7 @@ class ProductObject
         $this->id = $params['id'] ?? '';
         $this->name = $params['name'];
         $this->price = $params['price'] ?? '?';
-        $this->description = $params['description'];
+        $this->description = nl2br($params['description']);
         $this->photo = $params['photo'] ?? '';
         $this->manufacturer_id = $params['manufacturer_id'];
     }

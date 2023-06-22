@@ -52,7 +52,7 @@ if (session_status() == 0) {
         </div>
 
         <div class="description">
-            <span class="span-price"><?php echo number_format($each['price'], 0, '', ',') ?></span>
+            <span class="span-price"><?php echo number_format($each['price'], 0,'',',') ?>đ</span>
             <span><?php echo $each['name'] ?></span>
         </div>
 
@@ -65,7 +65,7 @@ if (session_status() == 0) {
                 >
                     -
                 </button>
-                <span><?php echo $each['quantity'] ?></span>
+                <span class="span-quantity"><?php echo $each['quantity'] ?></span>
                 <button
                         data-id='<?php echo $each['id']; ?>'
                         class="btn-update-quantity" ;
@@ -86,22 +86,26 @@ if (session_status() == 0) {
             </span>
         </div>
         <div class="buttons">
-            <button class="like-btn" style="font-size: 20px; "><i class="fa-solid fa-delete-left"></i></button>
+            <button
+                    class="btn-delete" style="font-size: 20px; "
+                    data-id="<?php echo $each['id'] ?>">
+                <i class="fa-solid fa-delete-left"></i>
+            </button>
         </div>
     </div>
-</div>
-<div class="item" style="display: flex; justify-content: flex-end">
-    <div class="total-price">
+    <?php } ?>
+    <div class="item" style="display: flex; justify-content: flex-end">
+        <div class="total-price">
                     <span class="span-total"> Total Price:
                     <?php if (!empty($sum)) {
                         echo number_format($sum, 0, '', ',');
                     } ?>₫
                     </span>
-        <a href="?controller=customer_order">Order now</a>
-    </div>
+            <a href="?controller=customer_order" style="color: darkgreen; font-weight: bold">Order now</a>
+        </div>
 </div>
-<?php }
-} else {
+</div>
+<?php } else {
     echo "<span style='text-align: center'>";
     echo "Không có sản phẩm nào trong giỏ hàng";
     echo "</span>";
@@ -123,10 +127,8 @@ if (session_status() == 0) {
                 data: {id, type},
             })
                 .done(function () {
-                    let parent = btn.parent();
-                    console.log(parent.text());
-                    // let parent_tr = btn.parents('tr');
-                    let price = parent_tr.find('.span-price').val();
+                    let parent_tr = btn.parents('.tr');
+                    let price = btn.closest('.item').find('.span-price').text().replace(/[^\d.]/g, '');
                     let quantity = parent_tr.find('.span-quantity').text();
                     if (type == 1) {
                         quantity++;
@@ -134,11 +136,15 @@ if (session_status() == 0) {
                         quantity--;
                     }
                     if (quantity == 0) {
-                        parent_tr.remove();
+                        btn.closest('.item').remove();
                     } else {
                         parent_tr.find('.span-quantity').text(quantity);
                         let sum = price * quantity;
-                        parent_tr.find('.span-sum').text(sum);
+                        console.log(price);
+                        console.log(quantity);
+                        console.log(sum);
+
+                        btn.closest('.item').find('.total-price .span-sum').text(new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(Math.floor(sum)));
                     }
 
                     getTotal();
@@ -154,8 +160,9 @@ if (session_status() == 0) {
                 data: {id},
             })
                 .done(function () {
-                    btn.parents('tr').remove();
+                    btn.closest('.item').remove();
                     getTotal();
+                    alert("Xóa thành công sản phẩm");
                 })
         });
     });

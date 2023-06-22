@@ -1,9 +1,3 @@
-<?php session_start() ?>
-<?php if ($_SESSION['role'] != 1){
-    echo "Bạn không có quyền truy cập";
-    die();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +37,7 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Customers</h4>
+                            <h4 class="card-title">Products</h4>
                             <a class="btn btn-gradient-primary" href="?controller=admin&action=create_product"><i class="fa-solid fa-plus"></i> Add new product</a>
                             <table class="table table-striped" >
                                 <thead>
@@ -55,11 +49,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($result as $each) { ?>
+                                <?php
+                                if ($result != null) {
+                                foreach ($result as $each) {
+                                    ?>
                                 <tr>
 
-                                    <td> <?php echo $each->get_name() ?> </td>
-                                    <td> <?php echo number_format($each->get_price(), 0,'',',') ?> </td>
+                                    <td style="white-space: break-spaces; word-break: break-word;"> <?php echo $each->get_name() ?> </td>
+                                    <td> <?php echo number_format($each->get_price(), 0,'',',') ?>đ</td>
                                     <td class="py-1">
                                         <img src="<?php echo $each->get_photo() ?>" alt="image" />
                                     </td>
@@ -75,7 +72,8 @@
                                     <td> <a class="text" href="?controller=admin&action=edit_product&id=<?php echo $each->get_id() ?>"><i class="fa-regular fa-note-sticky"></i> Update</a> </td>
                                     <td> <a class="text" href="?controller=admin&action=delete_product&id=<?php echo $each->get_id() ?>"><i class="fa-regular fa-trash-can"></i> Delete</a> </td>
                                 </tr>
-                                <?php } ?>
+                                <?php }
+                                }?>
                                 </tbody>
                             </table>
                         </div>

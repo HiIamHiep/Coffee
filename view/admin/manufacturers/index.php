@@ -1,9 +1,3 @@
-<?php session_start() ?>
-<?php if ($_SESSION['role'] != 1){
-    echo "Bạn không có quyền truy cập";
-    die();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +38,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Manufacturers</h4>
-                            <a class="btn btn-gradient-primary" href="?controller=admin&action=create_manufacturer"><i class="fa-solid fa-plus"></i> Add new manufacturer</a>
-                            <table class="table table-striped" >
+                            <a class="btn btn-gradient-primary" href="?controller=admin&action=create_manufacturer"><i
+                                        class="fa-solid fa-plus"></i> Add new manufacturer</a>
+                            <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>Name</th>
@@ -55,18 +50,26 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($result as $each) { ?>
-                                <tr>
-                                    <td> <?php echo $each->get_name() ?> </td>
-                                    <td> <?php echo $each->get_phone() ?> </td>
-                                    <td> <?php echo $each->get_address() ?> </td>
-                                    <td class="py-1">
-                                        <img src="<?php echo $each->get_photo() ?>" alt="image" />
-                                    </td>
-                                    <td> <a class="text" href="?controller=admin&action=edit_manufacturer&id=<?php echo $each->get_id() ?>"><i class="fa-regular fa-note-sticky"></i> Update</a> </td>
-                                    <td> <a class="text" href="?controller=admin&action=delete_manufacturer&id=<?php echo $each->get_id() ?>"><i class="fa-regular fa-trash-can"></i> Delete</a> </td>
-                                </tr>
-                                <?php } ?>
+                                <?php
+                                if ($result != null) {
+                                    foreach ($result as $each) {
+                                        ?>
+                                        <tr>
+                                            <td style="white-space: break-spaces; word-break: break-word;"> <?php echo $each->get_name() ?> </td>
+                                            <td> <?php echo $each->get_phone() ?> </td>
+                                            <td> <?php echo $each->get_address() ?> </td>
+                                            <td class="py-1">
+                                                <img src="<?php echo $each->get_photo() ?>" alt="image"/>
+                                            </td>
+                                            <td><a class="text"
+                                                   href="?controller=admin&action=edit_manufacturer&id=<?php echo $each->get_id() ?>"><i
+                                                            class="fa-regular fa-note-sticky"></i> Update</a></td>
+                                            <td><a class="text"
+                                                   href="?controller=admin&action=delete_manufacturer&id=<?php echo $each->get_id() ?>"><i
+                                                            class="fa-regular fa-trash-can"></i> Delete</a></td>
+                                        </tr>
+                                    <?php }
+                                } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -75,7 +78,7 @@
             </div>
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
-           <?php require './view/admin/footer.php' ?>
+            <?php require './view/admin/footer.php' ?>
             <!-- partial -->
         </div>
         <!-- main-panel ends -->

@@ -9,11 +9,15 @@ class Customer
 
     public function signup($params)
     {
+
+
         $object = new CustomerObject($params);
+
 
         $sql_check_customer = "select count(*) from {$this->table} where email = '{$object->get_email()}' ";
         $result = (new Connect())->select($sql_check_customer);
-        $num_rows = mysqli_num_rows($result);
+        echo "<pre>";
+        $num_rows = mysqli_num_rows($result)['count(*)'];
 
         if ($num_rows) {
             session_start();
@@ -22,7 +26,7 @@ class Customer
             exit();
         }
 
-        $sql = " insert into {$this->table} (first_name, last_name, email, password, phone_number, address, birth_date) values ('".$object->get_first_name()."','".$object->get_last_name()."','".$object->get_email()."','".$object->get_password()."','".$object->get_phone_number()."','".$object->get_address()."','".$object->get_birth_date()."') ";
+        $sql = " insert into {$this->table} (first_name, last_name, gender, email, password, phone_number, address, birth_date) values ('".$object->get_first_name()."','".$object->get_last_name()."','".$object->get_gender()."','".$object->get_email()."','".$object->get_password()."','".$object->get_phone_number()."','".$object->get_address()."','".$object->get_birth_date()."') ";
 
         $exec = (new Connect())->execute($sql);
 
@@ -39,6 +43,7 @@ class Customer
             header("Location:?controller=signup");
             exit();
         }
+        die();
     }
 
     public function signin($params)
@@ -88,8 +93,7 @@ class Customer
     public function signout()
     {
         session_start();
-        unset($_SESSION['name'], $_SESSION['cart']);
-
+        unset($_SESSION['name'],$_SESSION['role'],$_SESSION['id'] ,$_SESSION['phone_number'], $_SESSION['address'], $_SESSION['photo'],  $_SESSION['name'], $_SESSION['cart']);
         setcookie('remember',null, -1);
         header('location:?controller=base');
     }
@@ -97,7 +101,13 @@ class Customer
     public function index()
     {
         session_start();
-        $sql = "select * from {$this->table} where id <> '{$_SESSION['id']}'";
+        if (empty($_SESSION['id'])){
+
+        } else {
+            $id = $_SESSION['id'];
+
+        }
+        $sql = "select * from {$this->table} where id <> '{$id}'";
         $result = (new Connect())->select($sql);
         $row = mysqli_num_rows($result);
 

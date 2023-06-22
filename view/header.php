@@ -39,7 +39,7 @@
 <header>
     <nav>
         <div class="logo">
-            <a href="?controller=base">Blabla <span>Coffee</span></a>
+            <a href="?controller=base">Bobby<span>Coffee</span></a>
         </div>
         <ul>
             <li><a href="#menu">Menu</a></li>
@@ -54,7 +54,7 @@
             <?php if(!empty($_SESSION['name'])) { ?>
             <li class="item"><a><?php echo $_SESSION['name'] ?></a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item-lv2"><a href="?controller=signout" class="nav-link">View information</a></li>
+                    <li class="nav-item-lv2"><a href="?controller=profile" class="nav-link">View information</a></li>
                     <li class="nav-item-lv2"><a href="?controller=signout" class="nav-link">Sign out</a></li>
                 </ul>
             </li>

@@ -1,9 +1,3 @@
-<?php session_start() ?>
-<?php if ($_SESSION['role'] != 1){
-    echo "Bạn không có quyền truy cập";
-    die();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +52,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($result as $each) { ?>
+                                <?php
+                                if ($result != null) {
+                                foreach ($result as $each) {
+                                    ?>
                                 <tr>
 
                                     <td> <?php echo $each->get_name_receiver() ?> </td>
@@ -105,7 +102,8 @@
                                         <?php } ?>
                                     </td>
                                 </tr>
-                                <?php } ?>
+                                <?php }
+                                }?>
                                 </tbody>
                             </table>
                         </div>

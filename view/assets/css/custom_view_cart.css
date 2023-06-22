@@ -24,7 +24,6 @@ body {
 
 .shopping-cart .item {
     padding: 20px 30px;
-    height: 120px;
     display: flex;
 }
 
@@ -38,7 +37,8 @@ body {
     margin-right: 60px;
 }
 .shopping-cart .delete-btn,
-.shopping-cart .like-btn {
+.shopping-cart .like-btn,
+.shopping-cart .btn-delete{
     display: inline-block;
     Cursor: pointer;
 }
@@ -48,15 +48,14 @@ body {
     background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
 }
 
-.shopping-cart .like-btn {
+.shopping-cart .like-btn,
+.shopping-cart .btn-delete {
     position: absolute;
     top: 9px;
     left: 15px;
-    background: url('twitter-heart.png');
     width: 60px;
     height: 60px;
-    background-size: 2900%;
-    background-repeat: no-repeat;
+
 }
 .shopping-cart .is-active {
     animation-name: animate;

@@ -38,33 +38,45 @@
     <div class="section-center">
         <div class="container">
             <div class="row">
+                <?php if (!empty($_SESSION['name'])) { ?>
                 <div class="booking-form">
                     <form method="post" action="?controller=checkout">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <span class="form-label">Name</span>
-                                    <input class="form-control" type="text" name="name_receiver" placeholder="Enter your name"
-                                           value="<?php echo $object->get_fullname() ?>">
+                                    <input class="form-control" type="text" name="name_receiver"
+                                           placeholder="Enter your name"
+                                           value="<?php
+                                           if (isset($object)) {
+                                               echo $object->get_fullname();
+                                           } ?>">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <span class="form-label">Email</span>
                                     <input class="form-control" type="email" placeholder="Enter your email"
-                                           value="<?php echo $object->get_email() ?>">
+                                           value="<?php if (isset($object)) {
+                                               echo $object->get_email();
+                                           } ?>">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <span class="form-label">Phone</span>
-                            <input class="form-control" name="phone_receiver" type="tel" placeholder="Enter your phone number"
-                                   value="<?php echo $object->get_phone_number() ?>">
+                            <input class="form-control" name="phone_receiver" type="tel"
+                                   placeholder="Enter your phone number"
+                                   value="<?php if (isset($object)) {
+                                       echo $object->get_phone_number();
+                                   } ?>">
                         </div>
                         <div class="form-group">
                             <span class="form-label">Address receiver</span>
                             <textarea class="form-control" type="text" name="address_receiver"
-                                      placeholder="Enter ZIP/Location"><?php echo $object->get_address() ?></textarea>
+                                      placeholder="Enter ZIP/Location"><?php if (isset($object)) {
+                                    echo $object->get_address();
+                                } ?></textarea>
                         </div>
                         <div class="shopping-cart">
                             <!-- Title -->
@@ -115,12 +127,17 @@
                         <div class="form-btn">
                             <button class="submit-btn">Order now</button>
                         </div>
+                        <?php } else { ?>
+                            <span style="display: flex; justify-content: center; margin-top: 150px; color: yellow; font-weight: bold">Vui lòng <a
+                                        href="?controller=signin">đăng nhập</a> để đặt hàng</span>
+                        <?php } ?>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <?php require 'footer.php' ?>
 </body>

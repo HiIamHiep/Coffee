@@ -49,8 +49,12 @@ switch ($controller) {
         (new UserController())->signout();
         break;
 
-    case 'info_customer':
-        (new UserController())->info_customer();
+    case 'profile':
+        (new UserController())->profile();
+        break;
+
+    case 'update_profile':
+        (new UserController())->update_profile();
         break;
 
     case 'customer_order':

@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,10 +51,10 @@
                                 </tr>
                                 <tr>
                                     <th>Price</th>
-                                    <td><?php echo $result->get_Price() ?></td>
+                                    <td><?php echo number_format($result->get_Price(), 0,'',',') ?>đ</td>
                                 </tr>
                                     <th>Description</th>
-                                    <td><?php echo $result->get_description() ?></td>
+                                    <td style="white-space: break-spaces;word-break: break-word;"><?php echo $result->get_description() ?></td>
                                 </tr>
                                 </tr>
                                     <th>Manufacturer</th>
