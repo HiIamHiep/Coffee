@@ -2,58 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d78547c-2649-4633-a38c-ab6ccd109eb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/customers/photos/1687453726.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/manufacturers/photos/1687028744.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168715.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168779.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168837.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687168903.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169059.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169109.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169153.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169339.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687169475.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333355.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333448.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333793.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687333870.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin/products/photos/1687334020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/css/profile_custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/js/validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/profile_customer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CustomerObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/CustomerObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ProductObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProductObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/customers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/customers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/manufacturers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/photos/1686672405.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/photos/1686672479.2_1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/manufacturers/photos/1686674887.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/orders/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/orders/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/orders/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/orders/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/products/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/products/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/products/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/products/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/products/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/custom_show_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom_show_product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/custom_view_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom_view_cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/form_order/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/form_order/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/checkout_order.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkout_order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/checkoutsuccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkoutsuccess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/view_cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/view_cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Connect.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +76,8 @@
       <workItem from="1687327294815" duration="599000" />
       <workItem from="1687332875358" duration="8287000" />
       <workItem from="1687361607381" duration="7710000" />
-      <workItem from="1687451725252" duration="2583000" />
+      <workItem from="1687451725252" duration="3568000" />
+      <workItem from="1687468688837" duration="945000" />
     </task>
     <servers />
   </component>

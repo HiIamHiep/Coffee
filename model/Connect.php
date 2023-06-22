@@ -2,10 +2,10 @@
 
 class Connect
 {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $password = 'admin@1234';
-    private $database = 'ban_caffe';
+    private $host = 'us-cdbr-east-06.cleardb.net';
+    private $user = 'b68a8766e141a8';
+    private $password = 'f88fa9af';
+    private $database = 'heroku_e5d511da014290d';
 
     private function cnt()
     {
