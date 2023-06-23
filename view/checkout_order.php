@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./view/assets/css/custom_view_cart.css">
     <link rel="stylesheet" href="./view/assets/css/style.css">
 
-    <title>Blabla Coffee</title>
+    <title>Bobby Coffee</title>
     <style>
         header {
             position: relative;
