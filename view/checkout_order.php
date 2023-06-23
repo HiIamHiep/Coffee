@@ -50,7 +50,7 @@
                                            value="<?php
                                            if (isset($object)) {
                                                echo $object->get_fullname();
-                                           } ?>">
+                                           } ?>" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -59,7 +59,7 @@
                                     <input class="form-control" type="email" placeholder="Enter your email"
                                            value="<?php if (isset($object)) {
                                                echo $object->get_email();
-                                           } ?>">
+                                           } ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -69,12 +69,12 @@
                                    placeholder="Enter your phone number"
                                    value="<?php if (isset($object)) {
                                        echo $object->get_phone_number();
-                                   } ?>">
+                                   } ?>" required>
                         </div>
                         <div class="form-group">
                             <span class="form-label">Address receiver</span>
                             <textarea class="form-control" type="text" name="address_receiver"
-                                      placeholder="Enter ZIP/Location"><?php if (isset($object)) {
+                                      placeholder="Enter ZIP/Location" required><?php if (isset($object)) {
                                     echo $object->get_address();
                                 } ?></textarea>
                         </div>

@@ -49,7 +49,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Name</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="name" class="form-control" value="<?php echo $object->get_name() ?>"/>
+                                                            <input type="text" name="name" class="form-control" value="<?php echo $object->get_name() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -57,7 +57,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Price</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="price" class="form-control" value="<?php echo $object->get_price() ?>"/>
+                                                            <input type="text" name="price" class="form-control" value="<?php echo $object->get_price() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -65,7 +65,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Description</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="description" class="form-control" value="<?php echo $object->get_description() ?>"/>
+                                                            <textarea name="description" class="form-control"><?php echo $object->get_description() ?></textarea>
                                                         </div>
                                                     </div>
                                                 </div>

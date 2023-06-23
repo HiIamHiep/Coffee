@@ -48,7 +48,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">First Name</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="first_name" class="form-control"/>
+                                                            <input type="text" name="first_name" class="form-control" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -56,7 +56,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Last Name</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="last_name" class="form-control"/>
+                                                            <input type="text" name="last_name" class="form-control" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -87,7 +87,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Email</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="email" class="form-control"/>
+                                                            <input type="text" name="email" class="form-control" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -95,7 +95,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Password</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="password" class="form-control"/>
+                                                            <input type="text" name="password" class="form-control" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -111,7 +111,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Phone number</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control"/>
+                                                            <input type="text" name="phone_number" class="form-control" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -119,7 +119,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Address</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control"/>
+                                                            <input type="text" name="address" class="form-control" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -127,7 +127,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Birth Date</label>
                                                         <div class="col-sm-9">
-                                                            <input type="date" name="birth_date" class="form-control"/>
+                                                            <input type="date" name="birth_date" class="form-control" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -139,7 +139,7 @@
                                                                 <label class="form-check-label">
                                                                     <input type="radio" class="form-check-input"
                                                                            name="membershipRadios"
-                                                                           id="membershipRadios1" value=""> User
+                                                                           id="membershipRadios1" value="0"> User
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -148,7 +148,7 @@
                                                                 <label class="form-check-label">
                                                                     <input type="radio" class="form-check-input"
                                                                            name="membershipRadios"
-                                                                           id="membershipRadios2" value="option2"> Admin
+                                                                           id="membershipRadios2" value="1"> Admin
                                                                 </label>
                                                             </div>
                                                         </div>

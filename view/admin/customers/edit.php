@@ -48,7 +48,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">First Name</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="first_name" class="form-control" value="<?php echo $object->get_first_name() ?>"/>
+                                                            <input type="text" name="first_name" class="form-control" value="<?php echo $object->get_first_name() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -56,7 +56,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Last Name</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="last_name" class="form-control" value="<?php echo $object->get_last_name() ?>"/>
+                                                            <input type="text" name="last_name" class="form-control" value="<?php echo $object->get_last_name() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -87,7 +87,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Email</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="email" class="form-control" value="<?php echo $object->get_email() ?>"/>
+                                                            <input type="text" name="email" class="form-control" value="<?php echo $object->get_email() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -95,7 +95,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Password</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="password" class="form-control" value="<?php echo $object->get_password() ?>"/>
+                                                            <input type="text" name="password" class="form-control" value="<?php echo $object->get_password() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -112,7 +112,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Phone number</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control" name="phone_number" value="<?php echo $object->get_phone_number() ?>"/>
+                                                            <input type="text" class="form-control" name="phone_number" value="<?php echo $object->get_phone_number() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -120,7 +120,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Address</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control" name="address" value="<?php echo $object->get_address() ?>"/>
+                                                            <input type="text" class="form-control" name="address" value="<?php echo $object->get_address() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -128,7 +128,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Birth Date</label>
                                                         <div class="col-sm-9">
-                                                            <input type="date" name="birth_date" class="form-control" value="<?php echo $object->get_birth_date() ?>"/>
+                                                            <input type="date" name="birth_date" class="form-control" value="<?php echo $object->get_birth_date() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -49,7 +49,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Name</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="name" class="form-control" value="<?php echo $object->get_name() ?>"/>
+                                                            <input type="text" name="name" class="form-control" value="<?php echo $object->get_name() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -57,7 +57,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Phone</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="phone" class="form-control" value="<?php echo $object->get_phone() ?>"/>
+                                                            <input type="text" name="phone" class="form-control" value="<?php echo $object->get_phone() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -65,7 +65,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Address</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="address" class="form-control" value="<?php echo $object->get_address() ?>"/>
+                                                            <input type="text" name="address" class="form-control" value="<?php echo $object->get_address() ?>" required/>
                                                         </div>
                                                     </div>
                                                 </div>
