@@ -18,15 +18,6 @@ class ForgotPassword
         $sql = "select id, first_name, last_name from customers where email = '{$email}'";
         $result = (new Connect())->select($sql);
 
-//        echo "<pre>";
-//        echo(mysqli_num_rows($result));
-//        if(mysqli_num_rows($result) === 1)
-//        {
-//            echo "oke";
-//        }
-//        echo "</pre>";
-//        die();
-
         if(mysqli_num_rows($result) === 1) {
             $object = mysqli_fetch_array($result);
             $id = $object['id'];
