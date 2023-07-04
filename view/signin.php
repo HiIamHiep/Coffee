@@ -22,7 +22,7 @@ if (isset($_SESSION['error'])) {
     echo "</span>";
 }
 if (isset($_SESSION['success'])) {
-    echo "<span style='color: green'>";
+    echo "<span style='color: greenyellow'>";
     echo $_SESSION['success'];
     unset($_SESSION['success']);
     echo "</span>";
