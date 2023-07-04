@@ -2,6 +2,7 @@
 
 require 'CustomerObject.php';
 require_once 'Connect.php';
+require 'Mailer.php';
 
 class Customer
 {
@@ -9,10 +10,7 @@ class Customer
 
     public function signup($params)
     {
-
-
         $object = new CustomerObject($params);
-
 
         $sql_check_customer = "select count(*) from {$this->table} where email = '{$object->get_email()}' ";
         $result = (new Connect())->select($sql_check_customer);
@@ -30,11 +28,13 @@ class Customer
 
         $exec = (new Connect())->execute($sql);
 
-
         if ($exec) {
             session_start();
             $_SESSION['success'] = "Đăng kí thành công";
             header("Location:?controller=signin");
+            $title = "Đăng kí thành công";
+            $content = "Chúc mừng bạn đã trở thành thành viên của Bobby coffee: <a href='coffee.test/?controller=signin'>Nhấp vào đây để đăng nhập</a>";
+            (new Mailer())->mail($object->get_email(), $object->get_fullname(), $title, $content);
             exit();
         }
         else {
@@ -43,7 +43,7 @@ class Customer
             header("Location:?controller=signup");
             exit();
         }
-        die();
+
     }
 
     public function signin($params)
@@ -93,9 +93,31 @@ class Customer
     public function signout()
     {
         session_start();
-        unset($_SESSION['name'],$_SESSION['role'],$_SESSION['id'] ,$_SESSION['phone_number'], $_SESSION['address'], $_SESSION['photo'],  $_SESSION['name'], $_SESSION['cart']);
+        unset($_SESSION['name'],$_SESSION['role'],$_SESSION['id'] ,$_SESSION['phone_number'], $_SESSION['address'], $_SESSION['photo'],  $_SESSION['name']);
         setcookie('remember',null, -1);
         header('location:?controller=base');
+    }
+
+    public function change_password()
+    {
+        $token = $_POST['token'];
+        $password = $_POST['password'];
+
+        $sql = "select * from forgot_password where token = '{$token}' ";
+        $result = (new Connect())->select($sql);
+
+        if(mysqli_num_rows($result) === 0)
+        {
+            header('location:?controller=base');
+        }
+
+        $customer_id = mysqli_fetch_array($result)['customer_id'];
+        $sql = "update customers set password='{$password}' where id = '{$customer_id}'";
+        (new Connect())->execute($sql);
+
+        $sql = "delete from forgot_password where token='{$token}'";
+        (new Connect())->execute($sql);
+
     }
 
     public function index()

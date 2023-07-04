@@ -23,6 +23,30 @@ class Controller
         require 'view/signup.php';
     }
 
+    public function forgot_password(): void
+    {
+        require 'view/forgot_password.php';
+    }
+
+    public function reset_password(): void
+    {
+        require './model/ForgotPassword.php';
+        (new ForgotPassword())->send_email_to_user_forgot_password();
+        require 'view/reset_pw_success.php';
+    }
+
+    public function change_password(): void
+    {
+        require './model/Connect.php';
+        require 'view/change_password.php';
+    }
+
+    public  function confirm_change_password(): void
+    {
+        require './model/Customer.php';
+        (new Customer())->change_password();
+        require 'view/change_password_success.php';
+    }
 
     public function view_cart(): void
     {

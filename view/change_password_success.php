@@ -1,0 +1,1 @@
+Thay mật khẩu thành công, quay về <a href="?controller=base">trang chủ</a>

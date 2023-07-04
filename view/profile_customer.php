@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/view/assets/img/logo/favicon.ico" type="image/png">
     <link rel="stylesheet" href="./view/assets/css/style.css">
     <link rel="stylesheet" href="./view/assets/css/profile_customer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -83,7 +84,7 @@
                         <div class="col-md-6"><a href="#">Change password</a></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-6"><textarea name="address" class="form-control"><?php echo $object->get_address() ?></textarea>
+                        <div class="col-md-6"><textarea name="address" class="form-control" placeholder="Address"><?php echo $object->get_address() ?></textarea>
                         </div>
                     </div>
                     <div class="row mt-3">

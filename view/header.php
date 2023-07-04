@@ -36,7 +36,7 @@
         display: block;
     }
 </style>
-<header>
+<header class="pc-menu">
     <nav>
         <div class="logo">
             <a href="?controller=base">Bobby<span>Coffee</span></a>
@@ -68,5 +68,60 @@
             <li class="item"><a href="?controller=view_cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </nav>
+</header>
+<header class="menu-mobile">
+    <div class="navbar">
+        <a onclick="showSidebar()" style="cursor: pointer; padding: 10px 10px;"><i class="fa-solid fa-bars"></i></a>
+        <div class="logo">
+            <a href="?controller=base">Bobby<span>Coffee</span></a>
+        </div>
+        <a><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+
+    <div class="navigation-menu" id="navigation-menu">
+        <ul class="nav" >
+            <li class="nav-item">
+                <div class="logo">
+                    <a href="?controller=base">Bobby<span>Coffee</span></a>
+                    <a style=" font-size: 20px; cursor: pointer; margin-left: 25px" onclick="hiddenSidebar()"><i class="fa-solid fa-x"></i></a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="?controller=signin" class="nav-link">Login</a>
+            <li class="nav-item"><a href="?controller=product" class="nav-link">Shop</a>
+                <!-- <ul class="dropdown-menu">
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Oxford</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Loafer</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Derby</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Boots</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Sneaker- sandal</a></li>
+                </ul> -->
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a>
+                <!-- <ul class="dropdown-menu">
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Wallet</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Belt</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Dress Sock</a></li>
+                </ul> -->
+            </li>
+            <!-- <li class="nav-item"><a href="#" class="nav-link">Collection</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item-lv2"><a href="" class="nav-link">The flex</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">The new gen</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Timeless</a></li>
+                    <li class="nav-item-lv2"><a href="" class="nav-link">Wedding shoes</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
 
 </header>
+<script>
+    function hiddenSidebar() {
+        document.getElementById("navigation-menu").style.display = "none";
+        document
+    }
+
+    function showSidebar() {
+        document.getElementById("navigation-menu").style.display = "block";
+    }
+</script>

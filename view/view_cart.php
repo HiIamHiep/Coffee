@@ -12,6 +12,7 @@ if (session_status() == 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/view/assets/img/logo/favicon.ico" type="image/png">
     <link rel="stylesheet" href="./view/assets/css/style.css">
     <link rel="stylesheet" href="./view/assets/css/custom_view_cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -19,7 +20,7 @@ if (session_status() == 0) {
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Bobby Coffee</title>
     <style>
-        header {
+        .pc-menu {
             position: relative;
         }
     </style>
@@ -34,76 +35,78 @@ if (session_status() == 0) {
     </div>
 
     <?php
+    $total =0;
     if (!empty($_SESSION['cart'])) {
     $cart = $_SESSION['cart'];
     foreach ($cart
 
-    as $each) {
-    ?>
-    <!-- Product #1 -->
-    <div class="item">
-        <div class="buttons">
-            <span class="delete-btn"><i class="fa-regular fa-heart"></i></span>
-            <span class="like-btn"></span>
-        </div>
-
-        <div class="image">
-            <img src="<?php echo $each['photo'] ?>" alt="" height="63"/>
-        </div>
-
-        <div class="description">
-            <span class="span-price"><?php echo number_format($each['price'], 0,'',',') ?>đ</span>
-            <span><?php echo $each['name'] ?></span>
-        </div>
-
-        <div class="tr">
-            <div class="quantity">
-                <button
-                        data-id='<?php echo $each['id']; ?>'
-                        class="btn-update-quantity" ;
-                        data-type='0' ;
-                >
-                    -
-                </button>
-                <span class="span-quantity"><?php echo $each['quantity'] ?></span>
-                <button
-                        data-id='<?php echo $each['id']; ?>'
-                        class="btn-update-quantity" ;
-                        data-type='1' ;
-                >
-                    +
-                </button>
+             as $each) {
+        ?>
+        <!-- Product #1 -->
+        <div class="item">
+            <div class="buttons">
+                <span class="delete-btn"><i class="fa-regular fa-heart"></i></span>
+                <span class="like-btn"></span>
             </div>
-        </div>
 
-        <div class="total-price">
+            <div class="image">
+                <img src="<?php echo $each['photo'] ?>" alt="" height="63"/>
+            </div>
+
+            <div class="description">
+                <span class="span-price"><?php echo number_format($each['price'], 0, '', ',') ?>đ</span>
+                <span><?php echo $each['name'] ?></span>
+            </div>
+
+            <div class="tr">
+                <div class="quantity">
+                    <button
+                            data-id='<?php echo $each['id']; ?>'
+                            class="btn-update-quantity" ;
+                            data-type='0' ;
+                    >
+                        -
+                    </button>
+                    <span class="span-quantity"><?php echo $each['quantity'] ?></span>
+                    <button
+                            data-id='<?php echo $each['id']; ?>'
+                            class="btn-update-quantity" ;
+                            data-type='1' ;
+                    >
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="total-price">
             <span class="span-sum">
                 <?php
                 $sum = $each['quantity'] * $each['price'];
-                $total = $sum;
+                $total += $sum;
                 echo number_format($sum, 0, '', ',')
                 ?>₫
             </span>
+            </div>
+            <div class="buttons">
+                <button
+                        class="btn-delete" style="font-size: 20px; "
+                        data-id="<?php echo $each['id'] ?>">
+                    <i class="fa-solid fa-delete-left"></i>
+                </button>
+            </div>
         </div>
-        <div class="buttons">
-            <button
-                    class="btn-delete" style="font-size: 20px; "
-                    data-id="<?php echo $each['id'] ?>">
-                <i class="fa-solid fa-delete-left"></i>
-            </button>
-        </div>
-    </div>
     <?php } ?>
     <div class="item" style="display: flex; justify-content: flex-end">
         <div class="total-price">
-                    <span class="span-total"> Total Price:
-                    <?php if (!empty($sum)) {
-                        echo number_format($sum, 0, '', ',');
-                    } ?>₫
-                    </span>
+            Total Price:
+            <span id="total-price">
+                    <?php if (!empty($total)) {
+                        echo number_format($total, 0, '', ',');
+                    } ?>
+                    </span>₫
             <a href="?controller=customer_order" style="color: darkgreen; font-weight: bold">Order now</a>
         </div>
-</div>
+    </div>
 </div>
 <?php } else {
     echo "<span style='text-align: center'>";
@@ -140,11 +143,10 @@ if (session_status() == 0) {
                     } else {
                         parent_tr.find('.span-quantity').text(quantity);
                         let sum = price * quantity;
-                        console.log(price);
-                        console.log(quantity);
-                        console.log(sum);
-
-                        btn.closest('.item').find('.total-price .span-sum').text(new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(Math.floor(sum)));
+                        btn.closest('.item').find('.total-price .span-sum').text(new Intl.NumberFormat('vi-VN', {
+                            style: 'currency',
+                            currency: 'VND'
+                        }).format(Math.floor(sum)));
                     }
 
                     getTotal();
@@ -170,10 +172,18 @@ if (session_status() == 0) {
     function getTotal() {
         let total = 0;
         $(".span-sum").each(function () {
-            total += parseFloat($(this).text());
+            // console.log($(this));
+            let value = $(this).text().replace(/đ|,|\./gi, ""); // Loại bỏ chữ "đ", dấu phẩy và dấu chấm
+            console.log(value);
+            if (!isNaN(parseFloat(value))) {
+                total += parseFloat(value);
+            }
+            console.log(total);
+
         });
-        $("#span-total").text(total);
-        $("#total-price").text(total);
+        let formattedTotal = total.toLocaleString(); // Định dạng thành số tiền
+        $("#span-total").text(formattedTotal);
+        $("#total-price").text(formattedTotal);
 
     }
 </script>

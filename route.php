@@ -49,6 +49,25 @@ switch ($controller) {
         (new UserController())->signout();
         break;
 
+    case 'forgot_pw':
+        switch ($action) {
+            case '':
+                (new Controller())->forgot_password();
+                break;
+            case 'send_mail':
+                (new Controller())->reset_password();
+                break;
+        }
+        break;
+
+    case 'change_new_password':
+        (new Controller())->change_password();
+        break;
+
+    case 'confirm_change_password':
+        (new Controller())->confirm_change_password();
+        break;
+
     case 'profile':
         (new UserController())->profile();
         break;

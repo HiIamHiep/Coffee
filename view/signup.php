@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <link rel="shortcut icon" href="/view/assets/img/logo/favicon.ico" type="image/png">
+    <title>Sign Up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Icon -->
     <link rel="stylesheet" href="./view/assets/signup/fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="./view/assets/signup/css/style.css">
+    <link rel="stylesheet" href="./view/assets/css/style.css">
+    <style>
+        header {
+            background-color: #333;
+            opacity: .7;
+        }
+    </style>
 </head>
 <body>
+    <?php require 'header.php'?>
 
     <div class="main">
 
         <!-- Sign up form -->
         <section class="signup">
             <?php
-            session_start();
+//            session_start();
             if(isset($_SESSION['error'])){
                 echo "<span style='color: red'>";
                 echo $_SESSION['error'];

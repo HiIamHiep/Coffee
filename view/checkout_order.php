@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/view/assets/img/logo/favicon.ico" type="image/png">
     <link rel="stylesheet" href="./view/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="./view/assets/css/custom_view_cart.css">
     <link rel="stylesheet" href="./view/assets/css/style.css">
 
-    <title>Bobby Coffee</title>
+    <title>Order</title>
     <style>
         header {
             position: relative;
@@ -117,8 +118,18 @@
                                             </span>
                                         </div>
                                     </div>
-                                <?php }
-                            } else {
+                                <?php } ?>
+                                <div class="item" style="display: flex; justify-content: flex-end">
+                                    <div class="total-price">
+                                        Total Price:
+                                        <span id="total-price" style="color: red">
+                                            <?php if (!empty($total)) {
+                                                echo number_format($total, 0, '', ',');
+                                            } ?>₫
+                                        </span>
+                                    </div>
+                                </div>
+                            <?php } else {
                                 echo "<span style='text-align: center'>";
                                 echo "Không có sản phẩm nào trong giỏ hàng";
                                 echo "</span>";
