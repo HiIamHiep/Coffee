@@ -1,92 +1,62 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Login</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="/view/assets/img/logo/favicon.ico" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="./view/assets/login/css/style.css">
-    <link rel="stylesheet" href="./view/assets/css/style.css">
-</head>
-<body class="img js-fullheight" style="background-image: url(./view/assets/login/images/bg.jpg);">
-<?php
-if (isset($_SESSION['error'])) {
-    echo "<span style='color: red'>";
-    echo $_SESSION['error'];
-    unset($_SESSION['error']);
-    echo "</span>";
-}
-if (isset($_SESSION['success'])) {
-    echo "<span style='color: greenyellow'>";
-    echo $_SESSION['success'];
-    unset($_SESSION['success']);
-    echo "</span>";
-}
-if (isset($_SESSION['alert'])) {
-    echo "<span style='color: indianred'>";
-    echo $_SESSION['alert'];
-    unset($_SESSION['alert']);
-    echo "</span>";
-}
-?>
-<?php require "header.php" ?>
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">Sign In</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <div class="login-wrap p-0">
-                    <h3 class="mb-4 text-center">Have an account?</h3>
-                    <form action="?controller=signin&action=dosignin" method="post" class="signin-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" name="email" required>
+<div class="modal fade" id="modal-signin" role="dialog">
+    <div class="modal-dialog">
+        <div class="signin">
+            <div class="container-signin sign-in-container" id="container">
+                <div class="form-container">
+                    <form method="post" id="signin-form">
+                        <div class="title-container mt-16">
+                            <h1>Sign in</h1>
                         </div>
-                        <div class="form-group">
-                            <input id="password-field" type="password" class="form-control" placeholder="Password"
-                                   name="password" required>
-                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        <div class="alert alert-success" id="div-notice-signin" style="display: none">
+
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                            <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
                         </div>
-                        <div class="form-group d-md-flex">
-                            <div class="w-50">
-                                <label class="checkbox-wrap checkbox-primary">Remember Me
-                                    <input type="checkbox" name="remember">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <div class="w-50 text-md-right">
-                                <a href="?controller=forgot_pw" style="color: #fff">Forgot Password</a>
-                            </div>
-                        </div>
+                        <span>or use your account</span>
+                        <input type="email" placeholder="Email" name="email" required/>
+                        <input type="password" placeholder="Password" name="password" required/>
+<!--                      <button style="margin-top: 7px;">Sign In</button>-->
+                        <button style="margin-top: 7px;" name="signin" id="signin" class="form-submit">Sign In</button>
+                        <a href="" >
+                            <input type="checkbox" name="remember">
+                        </a>
+                        <a href="?controller=forgot_pw">Forgot your password?</a>
                     </form>
-                    <p class="w-100 text-center">&mdash; You don't have account &mdash;</p>
-                    <div class="social d-flex text-center">
-                        <a href="?controller=signup" class="px-2 py-2 mr-md-1 rounded"><span
-                                    class="ion-logo-facebook mr-2"></span>Sign Up</a>
-                        <!--	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>-->
+                    <div class="register-container">
+                        <button name="signup" id="signup" class="signup1" > <a>You don't have account? Register</a></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<script src="./view/assets/login/js/jquery.min.js"></script>
-<script src="./view/assets/login/js/popper.js"></script>
-<script src="./view/assets/login/js/bootstrap.min.js"></script>
-<script src="./view/assets/login/js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-</body>
-</html>
+<script>
+    $(document).ready(function () {
+        $('#signin-form').submit(function (event) {
+            event.preventDefault();
+            $.ajax({
+                url: '?controller=signin&action=dosignin',
+                type: 'POST',
+                dataType: 'html',
+                data: $(this).serializeArray(),
+            })
+                .done(function (response ) {
+                    if(response !== '1'){
+                        $('#div-notice-signin').text(response);
+                        $('#div-notice-signin').show();
+                    } else {
+                        $('#modal-signin').toggle();
+                        $('.modal-backdrop').hide();
 
+                    }
+                });
+        });
+    });
+</script>

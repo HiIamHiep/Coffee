@@ -14,59 +14,56 @@ class Customer
 
         $sql_check_customer = "select count(*) from {$this->table} where email = '{$object->get_email()}' ";
         $result = (new Connect())->select($sql_check_customer);
-        echo "<pre>";
-        $num_rows = mysqli_num_rows($result)['count(*)'];
+//        echo "<pre>";
+//        var_dump($result);
+        $num_rows = mysqli_fetch_array($result)['count(*)'];
+//        echo "</pre>";
 
         if ($num_rows) {
             session_start();
             $_SESSION['error'] = "Email này đã được đăng kí vui lòng sử dụng email khác";
-            header("Location:?controller=signup");
+            echo "Email này đã được đăng kí vui lòng sử dụng email khác";
+//            header("Location:?controller=signup");
             exit();
         }
 
         $sql = " insert into {$this->table} (first_name, last_name, gender, email, password, phone_number, address, birth_date) values ('".$object->get_first_name()."','".$object->get_last_name()."','".$object->get_gender()."','".$object->get_email()."','".$object->get_password()."','".$object->get_phone_number()."','".$object->get_address()."','".$object->get_birth_date()."') ";
 
-        $exec = (new Connect())->execute($sql);
+        (new Connect())->execute($sql);
 
-        if ($exec) {
-            session_start();
-            $_SESSION['success'] = "Đăng kí thành công";
-            header("Location:?controller=signin");
-            $title = "Đăng kí thành công";
-            $content = "Chúc mừng bạn đã trở thành thành viên của Bobby coffee: <a href='coffee.test/?controller=signin'>Nhấp vào đây để đăng nhập</a>";
-            (new Mailer())->mail($object->get_email(), $object->get_fullname(), $title, $content);
-            exit();
-        }
-        else {
-            session_start();
-            $_SESSION['error'] = "Đăng kí thất bại" . mysqli_error();
-            header("Location:?controller=signup");
-            exit();
-        }
+        session_start();
+        $_SESSION['success'] = "Đăng kí thành công";
+//        echo "Đăng kí thành công";
+//            header("Location:?controller=signin");
+        $title = "Đăng kí thành công";
+        $content = "Chúc mừng bạn đã trở thành thành viên của Bobby coffee: <a href='coffee.test/?controller=signin'>Nhấp vào đây để đăng nhập</a>";
+        (new Mailer())->send_mail($object->get_email(), $object->get_fullname(), $title, $content);
 
+        echo 1;
     }
 
     public function signin($params)
     {
-        if(isset($_POST['remember'])){
+        if (isset($_POST['remember'])) {
             $remember = true;
         } else {
             $remember = false;
         }
 
-        $object = new CustomerObject($params);
-
-        if(empty($object->get_email()) || empty($object->get_password())){
+        if (empty($params['email'] || empty($params['password']))) {
             session_start();
             $_SESSION['alert'] = "Vui lòng điền đầy đủ thông tin tài khoản";
-            header("Location:?controller=signin");
+            echo "Vui lòng điền đầy đủ thông tin tài khoản";
+//            header("Location:?controller=signin");
             exit();
         }
-        $sql_check_customer = "select * from {$this->table} where email = '{$object->get_email()}' and password = '{$object->get_password()}'";
+
+
+        $sql_check_customer = "select * from {$this->table} where email = '{$params['email']}' and password = '{$params['password']}'";
         $result = (new Connect())->select($sql_check_customer);
         $num_rows = mysqli_num_rows($result);
 
-        if($num_rows) {
+        if ($num_rows) {
             session_start();
             $customer = mysqli_fetch_array($result);
             $_SESSION['role'] = $customer['role'];
@@ -75,26 +72,28 @@ class Customer
             $_SESSION['phone_number'] = $customer['phone_number'];
             $_SESSION['address'] = $customer['address'];
             $_SESSION['photo'] = $customer['photo'];
-            $_SESSION['name'] = $customer['first_name'] . " " . $customer['last_name'];
-            if($remember){
-                $token = uniqid('user_',true);
+            $_SESSION['name'] = $customer['first_name']." ".$customer['last_name'];
+            if ($remember) {
+                $token = uniqid('user_', true);
                 $sql = "update {$this->table} set token = '{$token}' where id ='{$id}'";
                 (new Connect())->execute($sql);
-                setcookie($remember ,$token, time() + 60*60*24*30);
+                setcookie($remember, $token, time() + 60 * 60 * 24 * 30);
             }
-            header('location:?controller=base');
+//            header('location:?controller=base');
+            echo 1;
             exit();
         }
-            session_start();
-            $_SESSION['error'] = "Bạn nhập sai tài khoản hoặc mật khẩu vui lòng kiểm tra lại";
-            header('location:?controller=signin');
+        session_start();
+        $_SESSION['error'] = "Bạn nhập sai tài khoản hoặc mật khẩu vui lòng kiểm tra lại";
+        echo "Bạn nhập sai tài khoản hoặc mật khẩu vui lòng kiểm tra lại";
+//        header('location:?controller=signin');
     }
 
     public function signout()
     {
         session_start();
-        unset($_SESSION['name'],$_SESSION['role'],$_SESSION['id'] ,$_SESSION['phone_number'], $_SESSION['address'], $_SESSION['photo'],  $_SESSION['name']);
-        setcookie('remember',null, -1);
+        unset($_SESSION['name'], $_SESSION['role'], $_SESSION['id'], $_SESSION['phone_number'], $_SESSION['address'], $_SESSION['photo'], $_SESSION['name']);
+        setcookie('remember', null, -1);
         header('location:?controller=base');
     }
 
@@ -106,8 +105,7 @@ class Customer
         $sql = "select * from forgot_password where token = '{$token}' ";
         $result = (new Connect())->select($sql);
 
-        if(mysqli_num_rows($result) === 0)
-        {
+        if (mysqli_num_rows($result) === 0) {
             header('location:?controller=base');
         }
 
@@ -123,7 +121,7 @@ class Customer
     public function index()
     {
         session_start();
-        if (empty($_SESSION['id'])){
+        if (empty($_SESSION['id'])) {
 
         } else {
             $id = $_SESSION['id'];
@@ -133,9 +131,8 @@ class Customer
         $result = (new Connect())->select($sql);
         $row = mysqli_num_rows($result);
 
-        if($row > 0)
-        {
-            foreach ($result as $each){
+        if ($row > 0) {
+            foreach ($result as $each) {
                 $object = new CustomerObject($each);
 
                 $arr[] = $object;
@@ -148,7 +145,7 @@ class Customer
 
     public function create($params)
     {
-        if($_FILES['photo']['size'] == '0'){
+        if ($_FILES['photo']['size'] == '0') {
             $path_file = '';
         } else {
             $photo = $_FILES['photo'];
@@ -183,7 +180,7 @@ class Customer
 
     public function update($params)
     {
-        if($_FILES['photo']['size'] == '0'){
+        if ($_FILES['photo']['size'] == '0') {
             $path_file = $_POST['old_photo'];
         } else {
             $photo = $_FILES['photo'];

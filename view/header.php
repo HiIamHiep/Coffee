@@ -8,10 +8,10 @@
         list-style: none;
         border: 1px solid #333;
         z-index: 1000;
-        min-width: 220px;
+        /*min-width: 200px;*/
         padding: 5px 0;
         margin: 2px 0 0;
-        right: -55px;
+        /*right: -55px;*/
         font-size: 14px;
         text-align: left;
         background-color: #fff;
@@ -36,6 +36,10 @@
         display: block;
     }
 </style>
+<?php
+    include "signup.php";
+    include "signin.php";
+?>
 <header class="pc-menu">
     <nav>
         <div class="logo">
@@ -59,13 +63,12 @@
                 </ul>
             </li>
             <?php } else { ?>
-            <li class="item"><a href="?controller=signin">Login</a>
+                <li class="item"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signin">Login</button>
                 <ul class="dropdown-menu">
-                    <li class="nav-item-lv2"><a href="?controller=signup" class="nav-link">Sign Up</a></li>
-                </ul>
+                    <li class="nav-item-lv2"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Sign Up</button></li></ul>
             </li>
             <?php } ?>
-            <li class="item"><a href="?controller=view_cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li class="item"><a href="?controller=view_cart"><i class="fa-solid fa-cart-shopping" ></i></a></li>
         </ul>
     </nav>
 </header>
@@ -86,7 +89,8 @@
                     <a style=" font-size: 20px; cursor: pointer; margin-left: 25px" onclick="hiddenSidebar()"><i class="fa-solid fa-x"></i></a>
                 </div>
             </li>
-            <li class="nav-item"><a href="?controller=signin" class="nav-link">Login</a>
+            <li class="nav-item"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Login</button></li>
+            <li class="nav-item"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Sign up</button></li>
             <li class="nav-item"><a href="?controller=product" class="nav-link">Shop</a>
                 <!-- <ul class="dropdown-menu">
                     <li class="nav-item-lv2"><a href="" class="nav-link">Oxford</a></li>
@@ -118,7 +122,6 @@
 <script>
     function hiddenSidebar() {
         document.getElementById("navigation-menu").style.display = "none";
-        document
     }
 
     function showSidebar() {

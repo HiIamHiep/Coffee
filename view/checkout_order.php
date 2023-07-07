@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/view/assets/img/logo/favicon.ico" type="image/png">
     <link rel="stylesheet" href="./view/assets/css/style.css">
+    <link rel="stylesheet" href="./view/assets/css/custom.css">
+    <link rel="stylesheet" href="./view/assets/signup/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -139,8 +142,7 @@
                             <button class="submit-btn">Order now</button>
                         </div>
                         <?php } else { ?>
-                            <span style="display: flex; justify-content: center; margin-top: 150px; color: yellow; font-weight: bold">Vui lòng <a
-                                        href="?controller=signin">đăng nhập</a> để đặt hàng</span>
+                            <span style="display: flex; justify-content: center; margin-top: 150px; color: darkred; font-weight: bold">Vui lòng ĐĂNG NHẬP để đặt hàng</span>
                         <?php } ?>
                     </form>
                 </div>

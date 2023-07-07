@@ -6,6 +6,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+
 }
 
 html {
@@ -29,6 +30,7 @@ img {
 }
 
 header .logo a {
+    text-decoration: none;
     font-size: 30px;
     color: white;
     padding: 15px 30px;
@@ -56,6 +58,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
+    color: white;
+    text-decoration: none;
     border-bottom: 2px solid white;
 }
 
@@ -230,6 +234,7 @@ header .header-right .item:hover {
 }
 
 .shop-box .card-body {
+    background-color: #3e3d3d;
     padding: 20px;
     color: white;
     border: 3px solid #3B3B3B;
@@ -249,6 +254,7 @@ header .header-right .item:hover {
 .shop-box .card-body .cash {
     font-size: 22px;
     margin-left: 90px;
+    color: orangered;
 
 }
 
@@ -383,6 +389,7 @@ form .form-content input:valid~span::before {
     font-size: 17px;
     padding: 10px;
     margin: 5px;
+    padding: 8px 10px 8px 10px;
 }
 
 .footer .footer-box .social-media a:hover {
@@ -406,6 +413,17 @@ form .form-content input:valid~span::before {
 
 .menu-mobile .navbar {
     display: none;
+}
+
+.menu-mobile a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-mobile a:hover {
+    color: #fff;
+    opacity: 0.7;
+
 }
 
 /* Responsive */
@@ -549,6 +567,10 @@ form .form-content input:valid~span::before {
         display: none;
     }
 
+    .pc-menu a {
+        text-decoration: none;
+    }
+
     .menu-mobile  {
         display: block;
         align-items: center;
@@ -602,8 +624,12 @@ form .form-content input:valid~span::before {
 .navigation-menu .nav .nav-item a {
     font-size: 20px;
     padding: 16px 16px;
-    /*padding-right: 80px;*/
     color: white;
+}
+
+.navigation-menu .nav .nav-link:hover {
+    background-color: #3e3d3d;
+    opacity: 0.5;
 }
 
 .navigation-menu .dropdown-menu .nav-item-lv2 .nav-link {
@@ -668,3 +694,20 @@ form .form-content input:valid~span::before {
     } */
 
 }
+
+.shop-box .card-body .cash {
+    position: initial;
+}
+
+.footer label {
+    position: initial;
+}
+
+.footer .copyright label {
+    color: #fff;
+}
+
+body {
+    padding-right: 0 !important;
+}
+
