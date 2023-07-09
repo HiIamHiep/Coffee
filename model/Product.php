@@ -13,6 +13,24 @@ class Product
         $result = (new Connect())->select($sql);
         $row = mysqli_num_rows($result);
 
+        if ($row > 0) {
+            foreach ($result as $each) {
+                $object = new ProductObject($each);
+
+                $arr[] = $object;
+            }
+            return $arr;
+        } else {
+            return $arr = [];
+        }
+    }
+
+    public function pagination()
+    {
+        $sql = "select * from products";
+        $result = (new Connect())->select($sql);
+        $row = mysqli_num_rows($result);
+
 
         if ($row > 0) {
             if (!isset ($_GET['page']) ) {

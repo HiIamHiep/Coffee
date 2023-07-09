@@ -245,7 +245,7 @@ class Controller
         require './model/Role.php';
         (new Role())->check();
         require './model/Product.php';
-        $result = (new Product())->index();
+        $result = (new Product())->pagination();
         require 'view/admin/products/index.php';
     }
 
