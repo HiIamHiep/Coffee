@@ -55,19 +55,18 @@
 
     <nav>
         <ul class="header-right">
-            <?php if(!empty($_SESSION['name'])) { ?>
-            <li class="item"><a><?php echo $_SESSION['name'] ?></a>
+
+            <li class="item" id="name-user" <?php if(empty($_SESSION['name'])) {  echo "style='display: none'"; } ?>><a><?php if(!empty($_SESSION['name'])) { echo $_SESSION['name']; }  ?></a>
                 <ul class="dropdown-menu">
                     <li class="nav-item-lv2"><a href="?controller=profile" class="nav-link">View information</a></li>
                     <li class="nav-item-lv2"><a href="?controller=signout" class="nav-link">Sign out</a></li>
                 </ul>
             </li>
-            <?php } else { ?>
-                <li class="item"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signin">Login</button>
+                <li class="item" id="menu-guest" <?php if(!empty($_SESSION['name'])) {  echo "style='display: none'"; } ?>>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signin">Login</button>
                 <ul class="dropdown-menu">
                     <li class="nav-item-lv2"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Sign Up</button></li></ul>
             </li>
-            <?php } ?>
             <li class="item"><a href="?controller=view_cart"><i class="fa-solid fa-cart-shopping" ></i></a></li>
         </ul>
     </nav>
@@ -89,8 +88,9 @@
                     <a style=" font-size: 20px; cursor: pointer; margin-left: 25px" onclick="hiddenSidebar()"><i class="fa-solid fa-x"></i></a>
                 </div>
             </li>
-            <li class="nav-item"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Login</button></li>
-            <li class="nav-item"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Sign up</button></li>
+            <li class="nav-item" id="name-user" <?php if(empty($_SESSION['name'])) {  echo "style='display: none'"; } ?>><a href="?controller=profile" class="nav-link"><?php echo $_SESSION['name'] ?></a></li>
+            <li class="nav-item" id="menu-guest" <?php if(!empty($_SESSION['name'])) {  echo "style='display: none'"; } ?>><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signin">Login</button></li>
+            <li class="nav-item" id="menu-guest" <?php if(!empty($_SESSION['name'])) {  echo "style='display: none'"; } ?>><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Sign up</button></li>
             <li class="nav-item"><a href="?controller=product" class="nav-link">Shop</a>
                 <!-- <ul class="dropdown-menu">
                     <li class="nav-item-lv2"><a href="" class="nav-link">Oxford</a></li>
@@ -115,6 +115,9 @@
                     <li class="nav-item-lv2"><a href="" class="nav-link">Wedding shoes</a></li>
                 </ul>
             </li> -->
+            <?php if(!empty($_SESSION['name'])) { ?>
+            <li class="nav-item"><a href="?controller=signout" class="nav-link">Sign out</a>
+            <?php } ?>
         </ul>
     </div>
 

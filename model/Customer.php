@@ -58,8 +58,8 @@ class Customer
             exit();
         }
 
-
-        $sql_check_customer = "select * from {$this->table} where email = '{$params['email']}' and password = '{$params['password']}'";
+        $password = addslashes($params['password']);
+        $sql_check_customer = "select * from {$this->table} where email = '{$params['email']}' and password = '{$password}'";
         $result = (new Connect())->select($sql_check_customer);
         $num_rows = mysqli_num_rows($result);
 

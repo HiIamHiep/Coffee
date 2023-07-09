@@ -15,23 +15,20 @@
                             </div>
                             <div class="modal-body">
                                 <form method="post" class="register-form" id="register-form">
-                                    <div class="form-group">
-                                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                        <input type="text" name="first_name" id="name" placeholder="First Name" required/>
+                                    <div class="form-group" >
+                                        <input type="text" name="first_name" id="name" placeholder="First Name" />
                                     </div>
-                                    <div class="form-group">
-                                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                        <input type="text" name="last_name" id="name" placeholder="Last Name" required/>
+                                    <div class="form-group" >
+                                        <input type="text" name="last_name" id="name" placeholder="Last Name" />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" >
                                         <label for="email"><i class="fa-solid fa-cake-candles"></i></label>
-                                        <input type="date" name="birth_date" id="email" required/>
+                                        <input type="date" name="birth_date" id="email" />
                                     </div>
-                                    <div class="form-group">
-                                        <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                        <input type="email" name="email" id="email" placeholder="Your Email" required/>
+                                    <div class="form-group" >
+                                        <input type="email" name="email" id="email" placeholder="Your Email" />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" >
                                         <div style="display: flex; flex-direction: row;">
                                             <span>Male</span>
                                             <input type="radio" name="gender" value="0"/>
@@ -39,9 +36,11 @@
                                             <input type="radio" name="gender" value="1"/>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                        <input type="password" name="password" id="pass" placeholder="Password" required/>
+                                    <div class="form-group" >
+                                        <input type="password" name="password" id="password" placeholder="Password" />
+                                    </div>
+                                    <div class="form-group" >
+                                        <input type="password" name="re_password" placeholder="re_password" />
                                     </div>
                                     <!--                            <div class="form-group">-->
                                     <!--                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>-->
@@ -78,31 +77,5 @@
 </div>
 <!-- JS -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="./view/assets/signup/vendor/jquery/jquery.min.js"></script>
 <script src="./view/assets/signup/js/main.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('#register-form').submit(function (event) {
-            event.preventDefault();
-            $.ajax({
-                url: '?controller=signup&action=dosignup',
-                type: 'POST',
-                dataType: 'html',
-                data: $(this).serializeArray(),
-            })
-                .done(function (response ) {
-                    if(response !== '1'){
-                        $('#div-notice-signup').text(response);
-                        $('#div-notice-signup').show();
-                    } else {
-                        $('#modal-signup').toggle();
-                        $('.modal-backdrop').hide();
-
-                    }
-                });
-        });
-    });
-</script>

@@ -8,9 +8,14 @@ class Role
             session_start();
         }
 
-        if (empty($_SESSION['role']) && $_SESSION['role'] != 1) {
+        if(isset($_SESSION['role']) == NULL) {
             echo "Bạn không có quyền truy cập";
-            die();
+            exit();
+        } else {
+            if ($_SESSION['role'] != '1') {
+                echo "Bạn không có quyền truy cập";
+                exit();
+            }
         }
 
     }

@@ -3,120 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="0d78547c-2649-4633-a38c-ab6ccd109eb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Connect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/custom_show_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom_show_product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/css/custom_detail_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom_detail_product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/css/custom_view_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom_view_cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap/_media.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap/mixins/_border-radius.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap/mixins/_reset-text.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap/mixins/_screen-reader.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap/mixins/_text-hide.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap/mixins/_visibility.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/bootstrap/utilities/_stretched-link.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/images/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/js/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_breadcrumb.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_button-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_carousel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_code.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_images.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_jumbotron.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_print.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_root.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_spinners.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_toasts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_tooltip.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_transitions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/bootstrap-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/bootstrap-reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/bootstrap.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_border-radius.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_caret.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_deprecate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_gradients.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_grid-framework.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_hover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_lists.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_nav-divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_reset-text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_resize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_table-row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_text-hide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_text-truncate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_transition.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/mixins/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_align.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_borders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_embed.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_flex.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_overflow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_screenreaders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_stretched-link.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/utilities/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/bootstrap/vendor/_rfs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/login/scss/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/signup/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/signup/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/change_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/change_password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/form_order/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/form_order/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/js/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/js/validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/checkout_order.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkout_order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/forgot_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/forgot_password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/detail_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/detail_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/profile_customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/profile_customer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/signin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/view_cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/view_cart.php" afterDir="false" />
@@ -206,7 +108,11 @@
       <workItem from="1688479879138" duration="6478000" />
       <workItem from="1688493567372" duration="1945000" />
       <workItem from="1688716022493" duration="2629000" />
-      <workItem from="1688730742742" duration="17444000" />
+      <workItem from="1688730742742" duration="18054000" />
+      <workItem from="1688838946067" duration="2560000" />
+      <workItem from="1688841773050" duration="647000" />
+      <workItem from="1688896079141" duration="9341000" />
+      <workItem from="1688923309549" duration="2162000" />
     </task>
     <servers />
   </component>

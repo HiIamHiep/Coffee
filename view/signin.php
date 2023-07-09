@@ -16,8 +16,13 @@
                             <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <span>or use your account</span>
-                        <input type="email" placeholder="Email" name="email" required/>
-                        <input type="password" placeholder="Password" name="password" required/>
+                        <div style="display: flex; flex-direction: initial">
+                            <input type="email" placeholder="Email" name="email" style="float: right"/>
+
+                        </div>
+                        <div style="display: flex; flex-direction: initial">
+                            <input type="password" placeholder="Password" name="password"/>
+                        </div>
 <!--                      <button style="margin-top: 7px;">Sign In</button>-->
                         <button style="margin-top: 7px;" name="signin" id="signin" class="form-submit">Sign In</button>
                         <a href="" >
@@ -33,30 +38,4 @@
         </div>
     </div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('#signin-form').submit(function (event) {
-            event.preventDefault();
-            $.ajax({
-                url: '?controller=signin&action=dosignin',
-                type: 'POST',
-                dataType: 'html',
-                data: $(this).serializeArray(),
-            })
-                .done(function (response ) {
-                    if(response !== '1'){
-                        $('#div-notice-signin').text(response);
-                        $('#div-notice-signin').show();
-                    } else {
-                        $('#modal-signin').toggle();
-                        $('.modal-backdrop').hide();
-
-                    }
-                });
-        });
-    });
-</script>
+<script src="/view/assets/js/validate.js"></script>
