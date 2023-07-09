@@ -22,6 +22,7 @@
     <link rel="shortcut icon" href="./view/admin/assets/images/favicon.ico"/>
 </head>
 <body>
+
 <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <?php require './view/admin/navbar.php' ?>
@@ -79,7 +80,17 @@
                         </div>
                     </div>
                 </div>
+                <div style="float: right">
+                    <?php
+                        echo "<div class='pagination'>";
+                        for($page = 1; $page<= $_SESSION['total_page_product']; $page++) {
+                             echo "<a class='page' href='?controller=admin&action=products&page={$page}' >" . $page . "</a>";
+                        }
+                    echo "</div>";
+                    ?>
+                </div>
             </div>
+
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
            <?php require './view/admin/footer.php' ?>

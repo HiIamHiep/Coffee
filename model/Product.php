@@ -13,14 +13,31 @@ class Product
         $result = (new Connect())->select($sql);
         $row = mysqli_num_rows($result);
 
+
         if ($row > 0) {
-            foreach ($result as $each) {
-                $object = new ProductObject($each);
+            if (!isset ($_GET['page']) ) {
+                $page = 1;
+            } else {
+                $page = $_GET['page'];
+            }
+            $results_per_page = 7; // Số lượng sản phẩm trong 1 trang
+            $page_first_result = ($page-1) * $results_per_page;
 
-                $arr[] = $object;
+            $sql = "select * from products";
+            $result = (new Connect())->select($sql);
+            $number_of_result = mysqli_num_rows($result); // Số lượng sản phẩm
+            $number_of_page = ceil($number_of_result / $results_per_page);
+            $_SESSION['total_page_product'] = $number_of_page;
 
+
+            $sql = "select * from products limit $page_first_result , $results_per_page";
+            $result = (new Connect())->select($sql);
+            //display the retrieved result on the webpage
+            while ($row = mysqli_fetch_array($result)) {
+                $arr[] = new ProductObject($row);
             }
             return $arr;
+
         } else {
             $arr = [];
         }
